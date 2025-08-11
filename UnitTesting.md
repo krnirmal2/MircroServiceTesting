@@ -1,12 +1,4 @@
-Here is a well-structured `.md` (Markdown) version of your **"UNIT TESTING IN JAVA"** notes, formatted for clarity and professional presentation:
-
----
-
 # Unit Testing in Java
-
-*Author: Arvind (Green Learner)*
-
----
 
 ## 📌 Introduction
 
@@ -153,7 +145,7 @@ Here is a well-structured `.md` (Markdown) version of your **"UNIT TESTING IN JA
 ---
 
 ## 🏷️ Tagging & Filtering Tests
-
+> 1. for different environment and different Group so during production we can specify which test cases will run and which ill exclude
 * Tag tests to selectively run them
 
 ---
@@ -163,6 +155,15 @@ Here is a well-structured `.md` (Markdown) version of your **"UNIT TESTING IN JA
 ### Why Mocking?
 
 * Unit tests should isolate the class under test by replacing dependencies.
+* Mockito is a mocking framework for java. Mockito allows convenient creation of substitutes of real objects for testing pursposes
+* mock dependency 
+
+### Test Double
+1. Test replacement of real/external dependencies
+2. Dummy objects :passed around but never used
+3. Fake objects : like memory db for acual db
+4. A sub class : intialise --> exercises --> verify
+5. Mock objec : initialse-->set expectation --> exercise --> verify
 
 ### Types of Test Doubles
 
@@ -183,7 +184,7 @@ Here is a well-structured `.md` (Markdown) version of your **"UNIT TESTING IN JA
 
     * Static methods
     * Private methods
-    * Constructors
+    * Constructors can't mock
 
 **Docs:** [Mockito FAQ](https://github.com/mockito/mockito/wiki/FAQ#what-are-the-limitations-of-mockito)
 
@@ -287,4 +288,4 @@ Here is a well-structured `.md` (Markdown) version of your **"UNIT TESTING IN JA
 
 ---
 
-Let me know if you'd like this exported as a downloadable `.md` file!
+

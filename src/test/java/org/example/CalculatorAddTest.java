@@ -8,15 +8,17 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorAddTest {
+    // step : need to instantiate the class which gone a use to test
     private Calculator calculator = new Calculator();
 
     @Test
     @DisplayName("Calculator Add test case - when both numbers are positive")
     void addTestCase1() {
-        //sample data
-        // expected data - 30
+
+        // sample/Actual data
         int n1 = 10;
         int n2 = 20;
+        // expected data - 30
         int expected = 30;
         int sum = calculator.add(n1, n2);
 
@@ -36,14 +38,14 @@ public class CalculatorAddTest {
         assertEquals(expected, sum);
     }
 
-    // handle exception Nested class insdie same method
+    // NOTE : Categories to handle exception Nested class inside  same method
     @Nested
     @DisplayName("Exception cases")
     class ExceptionCases {
         @Test
         @DisplayName("Calculator Add test case - when  any number is less than -100")
         void addTestCase3() {
-            RuntimeException exception = Assertions.assertThrows(RuntimeException.class, () -> calculator.add(-101, 100));
+            RuntimeException exception = Assertions.assertThrows(RuntimeException.class, () -> calculator.add(-101, 100)); // note : throw expection
 
             assertEquals("Numbers less than 100 are not allowed", exception.getMessage());
         }
@@ -96,7 +98,7 @@ public class CalculatorAddTest {
     @Test
     @DisplayName("Calculator Add test case - assertAll")
     void addTestCase8() {
-
+       // NOTE : assertAll WILL TEST WILL RUN MULTIPLE TEST CASES WITH MULTIPLE SAMPLE DATA AND EXPECTATION VALUES
         assertAll("mulitple test cases",
                 () -> assertEquals(46, calculator.add(23, 23)),
                 () -> assertEquals(460, calculator.add(230, 230)),
